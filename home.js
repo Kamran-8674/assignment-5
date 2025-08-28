@@ -9,7 +9,7 @@ function getClassElement(value){
     return classElement
 }
 
-const callBtns = document.getElementsByClassName('call-btn')
+
 const callCost = 20
 const date=new Date().toLocaleTimeString();
 
@@ -19,19 +19,21 @@ const date=new Date().toLocaleTimeString();
 const heartBtns = getClassElement('heart-btn')
 for(let heart of heartBtns){
     heart.addEventListener('click',function(){
-        heart.classList.add('bg-red-500')
+        heart.classList.add('text-red-500')
         const heartNumber =getIdelemet('heart-number').innerText;
         const newCopyNumber= Number(heartNumber)+1;
         getIdelemet('heart-number').innerText=newCopyNumber
+        
 
     })
+    
 }
 
 
 
 // call button
 
-
+const callBtns = document.getElementsByClassName('call-btn')
 for( let callBtn of callBtns){
     callBtn.addEventListener('click', function(){
         const availableCoin = getIdelemet('currentCoin').innerText;
@@ -74,13 +76,30 @@ for( let callBtn of callBtns){
 }
 
 // copybutton
+getIdelemet('cardContainerrr').addEventListener('click',function(e){
+    if(e.target.className.includes('copy-btn')){
+        
+        alert('copied')
+        const copyNumber =getIdelemet('copy-current-number').innerText;
+        const newCopyNumber= Number(copyNumber)+1;
+        getIdelemet('copy-current-number').innerText=newCopyNumber
+
+        
+
+        
+       }
+    })
+
+
+
+
 
 const copyBtns = getClassElement('copy-btn')
 for(let btn of copyBtns){
     btn.addEventListener('click',function(){
-        const copyNumber =getIdelemet('copy-current-number').innerText;
-        const newCopyNumber= Number(copyNumber)+1;
-        getIdelemet('copy-current-number').innerText=newCopyNumber
+        
+
+       
 
     })
 }
@@ -90,7 +109,13 @@ for(let btn of copyBtns){
 
 
 getIdelemet('clear-btn').addEventListener('click', function(){
-    getIdelemet('historyContainer').style.display='none'
+    const cardContainer=  getIdelemet('historyContainer')
+    cardContainer.innerHTML=""
+
+    
+
+    
+    
 })
 
 
