@@ -1,7 +1,8 @@
 console.log('i am connected')
 function getIdelemet(id){
     const element = document.getElementById(id);
-    return element;
+    
+ return element;
 }
 function getClassElement(value){
     const classElement = document.getElementsByClassName(value);
@@ -11,6 +12,8 @@ function getClassElement(value){
 const callBtns = document.getElementsByClassName('call-btn')
 const callCost = 20
 const date=new Date().toLocaleTimeString();
+
+// heart button
 
 
 const heartBtns = getClassElement('heart-btn')
@@ -25,6 +28,8 @@ for(let heart of heartBtns){
 }
 
 
+
+// call button
 
 
 for( let callBtn of callBtns){
@@ -68,6 +73,7 @@ for( let callBtn of callBtns){
     
 }
 
+// copybutton
 
 const copyBtns = getClassElement('copy-btn')
 for(let btn of copyBtns){
@@ -78,6 +84,11 @@ for(let btn of copyBtns){
 
     })
 }
+
+
+// clear button
+
+
 getIdelemet('clear-btn').addEventListener('click', function(){
     getIdelemet('historyContainer').style.display='none'
 })
