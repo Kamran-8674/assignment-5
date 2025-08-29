@@ -42,7 +42,7 @@ for( let callBtn of callBtns){
         const cardNumber = callBtn.parentNode.parentNode.children[3].innerText
         
         if(availableCoin<20){
-            alert('invalid')
+            alert('You do not have sufficient coin')
             return
         }
         else(
@@ -61,13 +61,16 @@ for( let callBtn of callBtns){
                     <h5 class="font-semibold">${cardTitle}</h5>
                     <p class="text-sm text-gray-400">${cardNumber}</p>
                 </div>
-                <div>
-                time
+                <div id="time">
+                
                     
                 </div>
             </div> 
         `
+        
         cardContainer.appendChild(newElement)
+
+        getIdelemet('time').innerText = new Date().toLocaleTimeString();
 
 
 
@@ -79,12 +82,13 @@ for( let callBtn of callBtns){
 getIdelemet('cardContainerrr').addEventListener('click',function(e){
     if(e.target.className.includes('copy-btn')){
         
-        alert('copied')
+        alert('Copied')
         const copyNumber =getIdelemet('copy-current-number').innerText;
         const newCopyNumber= Number(copyNumber)+1;
         getIdelemet('copy-current-number').innerText=newCopyNumber
 
-        
+    
+     
 
         
        }
@@ -94,15 +98,7 @@ getIdelemet('cardContainerrr').addEventListener('click',function(e){
 
 
 
-const copyBtns = getClassElement('copy-btn')
-for(let btn of copyBtns){
-    btn.addEventListener('click',function(){
-        
 
-       
-
-    })
-}
 
 
 // clear button
@@ -120,3 +116,4 @@ getIdelemet('clear-btn').addEventListener('click', function(){
 
 
 
+ 
