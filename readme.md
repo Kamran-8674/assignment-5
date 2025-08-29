@@ -1,6 +1,8 @@
 
 
-<!-- What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll** -->
+<!-- What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**? -->
+
+
 There are differences between getElementById, getElementsByClassName, and querySelector / querySelectorAll.For example:
 1- getElementById is used to find a specific element.
 
@@ -22,7 +24,7 @@ There are differences between getElementById, getElementsByClassName, and queryS
  
 <!--4. What is **Event Delegation** in JavaScript? Why is it useful? -->
 
-
+Event Delegation is a method in which we add event listeners in parent element instead of each children elements.It is useful for various reasons,for example, while adding event listener to 100000 buttons it is not a good idea to find them throug looping instead we should do it with event delegation 
 
 
 
